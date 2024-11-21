@@ -1,4 +1,4 @@
-# Linux 
+# Linux
 
 
 ## Instalar o docker no ubuntu
@@ -10,7 +10,7 @@ sudo chmod +x /usr/bin/docker-compose
 ```
 
 
-## LVM 
+## lvm
 
 Para identificar o disco executar o comando:
 ```bash
