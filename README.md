@@ -42,16 +42,47 @@ vgextend ubuntu-vg /dev/sdX1
 extendendo o Volume Lógico (LV) com todo espaço livre do VG
 ```bash=
 lvdisplay                                           # <- conferir o caminho do lv
+```
+
+extende o lv **/dev/ubuntu-vg/ubuntu-lv** em 100% do espaço disponível do VG
+```bash
 lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
-resize2fs /dev/ubuntu-vg/ubuntu-lv                  #<- extende o valor acima aplicado
+```
+
+extende o lv com valor acima aplicado. (*obs.: somente para ext{2,3,4}*)
+bash```
+resize2fs /dev/ubuntu-vg/ubuntu-lv              
 ```
 
 OBS.: para **sistemas de arquivos XFS**
 
+verifica a integridade do sistema de arquivos.
 ```bash= 
-xfs_check   <lv_name>                   # verifica a integridade do sistema de arquivos.
-xfs_repair -f <lv_name>                 # redimensiona o sistema de arquivos
+xfs_check   <lv_name>
 ```
+
+redimensiona o sistema de arquivos. *(obs.: qdo reduzido por exemplo)*
+```bash= 
+xfs_repair -f <lv_name>
+```
+
+para aumentar uma qtd específica, por exemplo: 200G
+```bash
+lvextend -L +200G <nome_do_lv>
+```
+
+verificar se realmente o lv foi expandido
+```bash
+lvdisplay
+```
+
+para redimensionar o sistema de arquivos xfs
+```bash
+xfs_growfs <nome_do_lv>
+```
+
+
+
 
 
 
