@@ -50,7 +50,7 @@ lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
 ```
 
 extende o lv com valor acima aplicado. (*obs.: somente para ext{2,3,4}*)
-bash```
+```bash
 resize2fs /dev/ubuntu-vg/ubuntu-lv              
 ```
 
