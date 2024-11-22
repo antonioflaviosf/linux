@@ -1,14 +1,39 @@
 # Linux
 
+## utilitários
+Ubuntu:
+```bash=
+sudo apt update; sudo apt upgrade -y; apt install -y vim terminator silversearcher-ag ;\
+sudo apt install --no-install-recommends -y apt-utils wget curl vim && \
+sudo apt install --no-install-recommends -y net-tools dnsutils
+```
 
-## Instalar o docker no ubuntu
+---
+## Usando o *for* no linux, exemplo: 
+1. definindo uma variavel
+```bash=
+lista="8.8.8.8 1.1.1.1 1.1.1.2 8.8.4.4"
+```
 
+2. executando o *for*. No exemplo abaixo será executado 1 ping para todos os IPs definidos em *lista*.
+```bash
+for i in $lista; do ping -c 1 $i; done
+```
+
+
+## Instalar o docker e docker-compose no ubuntu
+
+1. Instalar
 ```bash=
 sudo apt update; sudo apt upgrade -y; sudo apt install docker.io
 sudo curl -SL https://github.com/docker/compose/releases/download/v2.30.3/docker-compose-linux-x86_64 -o /usr/bin/docker-compose
 sudo chmod +x /usr/bin/docker-compose
 ```
 
+2. Adicionar usuario ao grupo docker
+```bash
+sudo usermod -aG docker <seu_user>
+```
 
 ## lvm
 

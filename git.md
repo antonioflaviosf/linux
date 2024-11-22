@@ -85,3 +85,22 @@ git branch
 git merge <nome-da-branch>
 ```
 
+## Trabalhando com repositórios remotos
+1. Verificar repositórios remotos configurados:
+```bash
+git remote -v
+```
+
+2. Enviar alterações para o repositório remoto:
+```bash
+git push origin <nome-da-branch>
+```
+
+3. Atualizar seu repositório local com alterações remotas:
+```bash
+git pull origin <nome-da-branch>
+```
+4. Baixar alterações sem aplicar (fetch):
+```bash
+git fetch
+```
