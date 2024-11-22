@@ -37,9 +37,9 @@ vgdisplay
 vgextend ubuntu-vg /dev/sdX1
 ```
 
-extendendo o Volume Lógico (LV) com todo espaço livre do VG:
+conferir o caminho do lv:
 ```bash=
-lvdisplay                                           # <- conferir o caminho do lv
+lvdisplay                                          
 ```
 
 extende o lv **/dev/ubuntu-vg/ubuntu-lv** em 100% do espaço disponível do VG:
