@@ -1,5 +1,5 @@
 # GIT
-
+Comandos básicos/úteis para uso no dia-a-dia.
 
 ## Instalar git
 
