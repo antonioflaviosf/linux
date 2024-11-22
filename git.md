@@ -26,7 +26,7 @@ Verificar configs autais:
 git config --list
 ```
 
-### Trabalhando com Repositorios
+## Trabalhando com Repositorios
 1. Clonar repositorio remoto: 
 ```bash
 git clone <url_do_repo>
@@ -58,3 +58,30 @@ git add .
 ```bash
 git commit -m "Mensagem do commit"
 ```
+
+## Trabalhando com branches
+1. Criar uma nova branch:
+```bash
+git branch <nome-da-branch>
+```
+
+2. Trocar de branch:
+```bash
+git checkout <nome-da-branch>
+```
+
+3. Criar e trocar para uma nova branch ao mesmo tempo:
+```bash
+git checkout -b <nome-da-branch>
+```
+
+4. Listar branches:
+```bash
+git branch
+```
+
+5. Mesclar uma branch:
+```bash
+git merge <nome-da-branch>
+```
+
