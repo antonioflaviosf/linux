@@ -3,7 +3,7 @@
 ## utilitários
 Ubuntu:
 ```bash=
-sudo apt update; sudo apt upgrade -y; apt install -y vim terminator silversearcher-ag ;\
+sudo apt update; sudo apt upgrade -y; apt install -y terminator silversearcher-ag ;\
 sudo apt install --no-install-recommends -y apt-utils wget curl vim && \
 sudo apt install --no-install-recommends -y net-tools dnsutils
 ```
@@ -120,3 +120,41 @@ conectar a interface via cli:
 ```bash=
 sudo picocom -b115200 /dev/ttyUSB0
 ```
+
+
+## Journal
+1. verificar tamanho atual dos logs jornal
+
+```bash
+sudo journalcctl --disk-usage
+```
+
+2. Limpar logs antigos com base em tempo. O comando abaixo remove logs com mais de 7 dias. Poderá ser ajustado para 1month 30min, etc.
+```bash
+sudo journalctl --vacuum-time=7d
+```
+
+3. Limpar logs com baso no tamanho 
+```bash
+sudo journalctl --vacuum-size=500M
+```
+
+4. Limpar todos os logs 
+```bash
+sudo journalctl --vacuum-size=0
+```
+
+---
+### Para configurar limite permanente 
+Você pode configurar o tamanho máximo permitido para os logs do journal editando o arquivo de configuração:
+
+1. Abra o arquivo de configuração:
+```bash
+sudo nano /etc/systemd/journald.conf
+```
+
+2. Encontre (ou adicione) a linha:
+```ini
+SystemMaxUse=500M
+```
+
