@@ -14,14 +14,13 @@ sudo zypper  update; sudo zypper upgrade -y; sudo zypper install git
 ```
 
 ## Comandos Basicos
-
-Configuração basico de nome e email:
+Configuração básica de nome e email:
 ```bash=
 git config --global user.name "Seu Nome"
 git config --global user.email "seuemail@example.com"
 ```
 
-Verificar configs autais: 
+Verificar configs atuais: 
 ```bash
 git config --list
 ```
@@ -104,3 +103,25 @@ git pull origin <nome-da-branch>
 ```bash
 git fetch
 ```
+
+## Resolver problemas
+1. Verificar histórico de commits:
+bash
+git log
+
+2. Ver diferenças entre versões:
+bash
+git diff
+
+3. Descartar alterações em um arquivo:
+bash
+git checkout -- <arquivo>
+
+4. Reverter último commit (mantendo alterações):
+bash
+git reset --soft HEAD~1
+
+5. Reverter último commit (desfazendo alterações):
+bash
+git reset --hard HEAD~1
+
