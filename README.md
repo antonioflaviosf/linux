@@ -144,17 +144,38 @@ sudo journalctl --vacuum-size=500M
 sudo journalctl --vacuum-size=0
 ```
 
----
 ### Para configurar limite permanente 
 Você pode configurar o tamanho máximo permitido para os logs do journal editando o arquivo de configuração:
 
 1. Abra o arquivo de configuração:
 ```bash
-sudo nano /etc/systemd/journald.conf
+sudo vi /etc/systemd/journald.conf
 ```
 
-2. Encontre (ou adicione) a linha:
+2. Encontre (ou adicione) a linha abaixo. Substitua *500M* pelo tamanho desejado para os logs, depois salve e saia (":wq")
 ```ini
 SystemMaxUse=500M
 ```
 
+3. Reinicie o serviço **systemd-journald** para aplicar as alterações:
+```bash
+sudo systemctl restart systemd-journald
+```
+
+### Apagar logs manualmente (opcional)
+Se você quiser apagar os arquivos diretamente:
+
+1. Localize os logs:
+```bash
+sudo du -sh /var/log/journal
+```
+
+2. Apague manualmente (não recomendado se você não configurou limites):
+```bash
+sudo rm -rf /var/log/journal/*
+```
+
+Depois, reinicie o serviço **systemd-journald**:
+```bash
+sudo systemctl restart systemd-journald
+```
