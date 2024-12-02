@@ -180,7 +180,7 @@ Depois, reinicie o serviço **systemd-journald**:
 sudo systemctl restart systemd-journald
 ```
 
-## Usando find  
+## Usando o `find`
 1. Listando arquivos criados ou modificados nas ultimas 10 hroas
 ```bash
 find /caminho/desejado -type f -mmin -600
@@ -194,32 +194,34 @@ find /caminho/desejado -type f -mmin -600
 ```bash
 find /caminho/desejado -type f -mmin -600 -exec rm -f {} +
 ``` 
-Diferença entre + e \; no find:
-Com +: Agrupa vários arquivos e os passa de uma só vez ao comando, o que é mais eficiente porque reduz o número de chamadas ao comando externo.
-Com \;: Executa o comando para cada arquivo individualmente, o que pode ser mais lento para uma grande quantidade de arquivos.
-Exemplo:
-Com +:
-bash
-Copy code
+### Diferença entre + e \; no find:
+
+- **Com `+`:** Agrupa vários arquivos e os passa de uma só vez ao comando, o que é mais eficiente porque reduz o número de chamadas ao comando externo.
+- **Com `\;`:** Executa o comando para cada arquivo individualmente, o que pode ser mais lento para uma grande quantidade de arquivos.
+
+**Exemplo:**
+Com `+`:
+```bash
 find . -type f -exec rm -f {} +
+```
 O comando acima pode ser traduzido para algo como:
-
-bash
-Copy code
+```bash
 rm -f arquivo1 arquivo2 arquivo3 ...
-Com \;:
-bash
-Copy code
-find . -type f -exec rm -f {} \;
-O comando acima será equivalente a executar:
+```
 
-bash
-Copy code
+Com `\;`:
+```bash
+find . -type f -exec rm -f {} \;
+```
+O comando acima será equivalente a executar:
+```bash
 rm -f arquivo1
 rm -f arquivo2
 rm -f arquivo3
-...
-Vantagens do uso de +:
-Melhor desempenho: O comando é executado menos vezes, pois trabalha em lotes.
-Limitação de chamadas ao comando: Para muitos arquivos, o uso de \; pode ser lento e consumir mais recursos.
-Por isso, é geralmente preferível usar + sempre que o comando permitir
+```
+
+**Vantagens do uso de `+`:**
+1. **Melhor desempenho**: O comando é executado menos vezes, pois trabalha em lotes.
+2. **Limitação de chamadas ao comando**: Para muitos arquivos, o uso de \; pode ser lento e consumir mais recursos.
+
+Por isso, é geralmente preferível usar `+` sempre que o comando permitir
