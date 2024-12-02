@@ -179,3 +179,18 @@ Depois, reinicie o serviço **systemd-journald**:
 ```bash
 sudo systemctl restart systemd-journald
 ```
+
+## Usando find  
+1. Listando arquivos criados ou modificados nas ultimas 10 hroas
+```bash
+find /caminho/desejado -type f -mmin -600
+``` 
+**Explicação dos parâmetros:**
+- /caminho/desejado: O diretório onde você deseja buscar os arquivos. Substitua por . para buscar no diretório atual.
+- type f: Limita a busca a arquivos (excluindo diretórios).
+- mmin -600: Busca arquivos modificados nos últimos 600 minutos (10 horas).
+
+2. Para remover tudo o que foi trazido na saida do caminho acima: 
+```bash
+find /caminho/desejado -type f -mmin -600 -exec rm -f {} +
+``` 
