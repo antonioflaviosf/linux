@@ -1,7 +1,7 @@
 # SOLUÇÃO DE PROBLEMAS
 
 
-
+<!-- ----------------------------------------------  -->
 ## Problema: `FAIL TO LOAD SELINUX POLICY. FREEZING`
 
 Este erro ocorre ao tentar inicializar um sistema operacional Oracle Linux 7.9 e indica que o sistema falhou ao carregar a política do SELinux (Security-Enhanced Linux). Como resultado, o sistema congela durante o processo de boot.
@@ -69,3 +69,8 @@ Desativar o SELinux deve ser a última opção, já que ele é uma camada import
 --- 
 
 > **Nota:** Caso o sistema ainda não inicialize corretamente, analise os logs do sistema e a configuração do SELinux para identificar problemas adicionais.
+
+
+<!-- ----------------------------------------------  -->
+
+## 
