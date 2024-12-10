@@ -8,17 +8,7 @@ sudo apt install --no-install-recommends -y apt-utils wget curl vim && \
 sudo apt install --no-install-recommends -y net-tools dnsutils
 ```
 
----
-## Usando o *for* no linux, exemplo: 
-1. definindo uma variavel
-```bash=
-lista="8.8.8.8 1.1.1.1 1.1.1.2 8.8.4.4"
-```
 
-2. executando o *for*. No exemplo abaixo será executado 1 ping para todos os IPs definidos em *lista*.
-```bash
-for i in $lista; do ping -c 1 $i; done
-```
 
 
 ## Instalar o docker e docker-compose no ubuntu
@@ -34,6 +24,20 @@ sudo chmod +x /usr/bin/docker-compose
 ```bash
 sudo usermod -aG docker <seu_user>
 ```
+
+
+---
+## Usando o *for* no linux, exemplo: 
+1. definindo uma variavel
+```bash=
+lista="8.8.8.8 1.1.1.1 1.1.1.2 8.8.4.4"
+```
+
+2. executando o *for*. No exemplo abaixo será executado 1 ping para todos os IPs definidos em *lista*.
+```bash
+for i in $lista; do ping -c 1 $i; done
+```
+
 
 ## lvm
 
@@ -225,3 +229,20 @@ rm -f arquivo3
 2. **Limitação de chamadas ao comando**: Para muitos arquivos, o uso de \; pode ser lento e consumir mais recursos.
 
 Por isso, é geralmente preferível usar `+` sempre que o comando permitir
+
+# Comando `history`
+
+1. Para listar linhas específicas do historico bash usando o `sed`
+```bash
+history | sed -n '900,950p'
+```
+
+2. listando usando o `awk`
+```bash
+history | awk 'NR>=900 && NR<=950'
+```
+
+*obs.: o comando sed para filtrar linhas pode ser usado em qualquer saida, por exemplo, no uso também com o comando `cat`*
+```bash
+cat <arquivo> | sed -n '10,20p'
+
