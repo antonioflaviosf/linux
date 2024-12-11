@@ -245,4 +245,12 @@ history | awk 'NR>=900 && NR<=950'
 *obs.: o comando sed para filtrar linhas pode ser usado em qualquer saida, por exemplo, no uso também com o comando `cat`*
 ```bash
 cat <arquivo> | sed -n '10,20p'
+```
+
+# Editor de Texto `vi`
+
+Procurar e substituir 
+```bash
+:%s/texto_a_procurar/texto_novo/g
+```
 
