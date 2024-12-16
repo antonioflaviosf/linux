@@ -198,6 +198,8 @@ find /caminho/desejado -type f -mmin -600
 ```bash
 find /caminho/desejado -type f -mmin -600 -exec rm -f {} +
 ``` 
+*OBS.: para parametro de tempo pode seru usado `-mtime` para dias ex.: -mtime -10 , busca por arquivos recentes dentro dos ultimos 10 dias, porém*
+
 ### Diferença entre + e \; no find:
 
 - **Com `+`:** Agrupa vários arquivos e os passa de uma só vez ao comando, o que é mais eficiente porque reduz o número de chamadas ao comando externo.
@@ -249,8 +251,13 @@ cat <arquivo> | sed -n '10,20p'
 
 # Editor de Texto `vi`
 
-Procurar e substituir 
+Procurar e substituir
 ```bash
 :%s/texto_a_procurar/texto_novo/g
 ```
 
+### Comentar multiplas linhas: 
+
+1. selecionar primeira linha e ser comentada e entrar no modo " Visual" com as Teclas de Atalho `CTRL+V`
+depois disso selecionar as linhas desejadas com auxílio das setas. 
+2. pressionar `I + #`depois `esc` duas vezes para que as linhas selecionadas sejam comentadas.
