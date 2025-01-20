@@ -261,3 +261,16 @@ Procurar e substituir
 1. selecionar primeira linha e ser comentada e entrar no modo " Visual" com as Teclas de Atalho `CTRL+V`
 depois disso selecionar as linhas desejadas com auxílio das setas. 
 2. pressionar `I + #`depois `esc` duas vezes para que as linhas selecionadas sejam comentadas.
+
+
+# Utilitários DNS `dig`
+
+Trazendo resposta curta com dig: 
+```bash 
+dig +short @8.8.8.8 <nome_domain>
+```
+
+Resposta com nome de dominio e tipo de RR + IP:
+```bash 
+dig +noall +answer @8.8.8.8 <nome_dominio>
+```
