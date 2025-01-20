@@ -265,7 +265,33 @@ depois disso selecionar as linhas desejadas com auxílio das setas.
 
 # Utilitários DNS `dig`
 
-Trazendo resposta curta com dig: 
+Consulta básica a um dominio 
+```bash
+dig <nome_dominio>
+```
+
+exibir tipo específicos de registros: 
+- MX
+```bash
+dig <nome_dominio> MX
+```
+
+- NS
+```bash
+dig <nome_dominio> NS
+```
+
+- TXT (registros de texto, uteis para SPF, verificaçao de dominios,etc.)
+```bash
+dig <nome_dominio> TXT
+```
+
+consultar versão do servidor DNS
+```bash
+dig @8.8.8.8 version.bind TXT
+```
+
+Traz uma resposta curta: 
 ```bash 
 dig +short @8.8.8.8 <nome_domain>
 ```
@@ -274,3 +300,9 @@ Resposta com nome de dominio e tipo de RR + IP:
 ```bash 
 dig +noall +answer @8.8.8.8 <nome_dominio>
 ```
+
+Pesquisa reversa
+```bash
+dig -x 8.8.8.8
+```
+
