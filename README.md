@@ -251,6 +251,7 @@ cat <arquivo> | sed -n '10,20p'
 
 # Editor de Texto `vi`
 | **[referência](https://vimhelp.org/)**
+
 Procurar e substituir
 ```bash
 :%s/texto_a_procurar/texto_novo/g
