@@ -256,6 +256,14 @@ Procurar e substituir
 :%s/texto_a_procurar/texto_novo/g
 ```
 
+Deletar várias linhas que começam com "202501" em um arquivo.
+```bash
+:g/^202501/d
+```
+- `g` é o comando global que aplica a ação em todas as linhas que correspondem o padrão.
+- `^202501`é o padrão que procura linhas que começam com "202501".
+- `d` é o comando para deletar as linhas correspondentes.
+
 ### Comentar multiplas linhas: 
 
 1. selecionar primeira linha e ser comentada e entrar no modo " Visual" com as Teclas de Atalho `CTRL+V`
