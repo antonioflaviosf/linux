@@ -25,6 +25,18 @@ Verificar configs atuais:
 git config --list
 ```
 
+obs.: poderá ser criado dois arquivos para assistencia as credenciais
+1. arquivo ~/.gitconfig
+```bash
+[user]
+	name = username
+	email = username@mail.com
+```
+2. arquivo ~/.git-credentials, esse por sua vez poderá conter mais de uma credencial caso necessário:
+```bash
+https://<user>:<token>@<url>
+```
+
 ## Trabalhando com Repositorios
 1. Clonar repositorio remoto: 
 ```bash
