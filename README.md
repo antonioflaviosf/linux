@@ -315,3 +315,7 @@ Pesquisa reversa
 dig -x 8.8.8.8
 ```
 
+Pesquisa sem recursividade 
+```bash
+dig @1.1.1.1 +norecurse <nome_dominio>
+```
