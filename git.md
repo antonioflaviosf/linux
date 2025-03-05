@@ -32,6 +32,7 @@ obs.: poderá ser criado dois arquivos para assistencia as credenciais
 	name = username
 	email = username@mail.com
 ```
+
 2. arquivo ~/.git-credentials, esse por sua vez poderá conter mais de uma credencial caso necessário:
 ```bash
 https://<user>:<token>@<url>
@@ -42,6 +43,7 @@ https://<user>:<token>@<url>
 ```bash
 git clone <url_do_repo>
 ```
+
 2. Inicializar um novo repositorio: 
 ```bash
 git init
@@ -60,6 +62,7 @@ git status
 ```bash
 git add <arquivo>
 ```
+
 - Todos os arquivos:
 ```bash
 git add .
@@ -111,6 +114,7 @@ git push origin <nome-da-branch>
 ```bash
 git pull origin <nome-da-branch>
 ```
+
 4. Baixar alterações sem aplicar (fetch):
 ```bash
 git fetch
@@ -118,22 +122,26 @@ git fetch
 
 ## Resolver problemas
 1. Verificar histórico de commits:
-bash
+```bash
 git log
+```
 
 2. Ver diferenças entre versões:
-bash
+```bash
 git diff
+```
 
 3. Descartar alterações em um arquivo:
-bash
+```bash
 git checkout -- <arquivo>
+```
 
 4. Reverter último commit (mantendo alterações):
-bash
+```bash
 git reset --soft HEAD~1
+```
 
 5. Reverter último commit (desfazendo alterações):
-bash
+```bash
 git reset --hard HEAD~1
-
+```
