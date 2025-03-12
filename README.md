@@ -9,8 +9,6 @@ sudo apt install --no-install-recommends -y net-tools dnsutils
 ```
 
 
-
-
 ## Instalar o docker e docker-compose no ubuntu
 
 1. Instalar
