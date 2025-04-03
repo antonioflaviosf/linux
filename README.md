@@ -8,6 +8,9 @@ sudo apt install --no-install-recommends -y apt-utils wget curl vim && \
 sudo apt install --no-install-recommends -y net-tools dnsutils
 ```
 
+---
+**Criação de `banners` para linux** [click_aqui](https://manytools.org/hacker-tools/ascii-banner/)
+---
 
 ## Instalar o docker e docker-compose no ubuntu
 
