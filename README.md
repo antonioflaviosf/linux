@@ -53,7 +53,7 @@ fdisk /dev/sdX
 n    #<- cria nova partição 
 p    #<- particao primaria
 t    #<- altera tipo de partição, selecionar '8e' (lvm)
-x    #<- salva alterações e sai do fdisk
+w    #<- salva alterações e sai do fdisk
 ```
 
 Criar PV (physical volume):
