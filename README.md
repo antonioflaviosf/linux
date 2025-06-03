@@ -28,6 +28,22 @@ sudo usermod -aG docker <seu_user>
 
 
 ---
+## Adicionar um novo diretorio no PATH
+Temporariamente até o sistema reiniciar
+```bash
+export PATH=$PATH:/novo_dir
+```
+1. Fixo via arquivo `~/.profile`. Inserir o conteudo `export PATH=$PATH:/novo_dir`ao final do arquivo.
+```bash=
+vi ~/.profile
+export PATH=$PATH:/novo_dir
+```
+2. Carregar o arquivo alterado: 
+``bash
+source ~/.profile
+``
+
+
 ## Usando o *for* no linux, exemplo: 
 1. definindo uma variavel
 ```bash=
