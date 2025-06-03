@@ -33,6 +33,7 @@ Temporariamente até o sistema reiniciar
 ```bash
 export PATH=$PATH:/novo_dir
 ```
+### Por usuario 
 1. Fixo via arquivo `~/.profile`. Inserir o conteudo `export PATH=$PATH:/novo_dir`ao final do arquivo.
 ```bash
 vi ~/.profile
@@ -41,6 +42,16 @@ export PATH=$PATH:/novo_dir
 2. Carregar o arquivo alterado: 
 ```bash
 source ~/.profile
+```
+### Para todo o sistema 
+1. Fixo via arquivo `/etc/.profile`. Inserir o conteudo `export PATH=$PATH:/novo_dir`ao final do arquivo.
+```bash
+vi /etc/.profile
+export PATH=$PATH:/novo_dir
+```
+2. Carregar o arquivo alterado: 
+```bash
+source /etc/.profile
 ```
 
 
