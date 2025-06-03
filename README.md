@@ -39,9 +39,9 @@ vi ~/.profile
 export PATH=$PATH:/novo_dir
 ```
 2. Carregar o arquivo alterado: 
-``bash
+```bash
 source ~/.profile
-``
+```
 
 
 ## Usando o *for* no linux, exemplo: 
