@@ -34,7 +34,7 @@ Temporariamente até o sistema reiniciar
 export PATH=$PATH:/novo_dir
 ```
 1. Fixo via arquivo `~/.profile`. Inserir o conteudo `export PATH=$PATH:/novo_dir`ao final do arquivo.
-```bash=
+```bash
 vi ~/.profile
 export PATH=$PATH:/novo_dir
 ```
