@@ -28,6 +28,135 @@ sudo usermod -aG docker <seu_user>
 
 
 ---
+✅ 1. Informações gerais do sistema:
+```bash
+uname -a
+```
+Exibe informações sobre o kernel e o sistema operacional.
+
+```bash
+hostnamectl
+```
+Mostra informações do hostname e detalhes básicos do hardware e sistema.
+```bash
+lsb_release -a
+```
+
+Exibe informações sobre a distribuição Linux (quando disponível).
+
+✅ 2. CPU:
+```bash
+lscpu
+```
+Lista informações detalhadas sobre a CPU, como número de núcleos, threads, arquitetura, etc.
+
+```bash
+cat /proc/cpuinfo
+```
+Exibe informações completas sobre cada núcleo da CPU.
+
+✅ 3. Memória RAM:
+```bash
+free -h
+```
+Mostra o uso atual de memória (RAM e swap).
+```bash
+cat /proc/meminfo
+```
+Informações detalhadas sobre a memória.
+
+```bash
+vmstat -s
+```
+Estatísticas sobre memória, swap e CPU.
+
+✅ 4. Disco (Armazenamento):
+
+```bash
+lsblk
+```
+Lista todos os dispositivos de bloco (discos, partições, etc.).
+
+```bash
+df -h
+```
+Mostra o uso de espaço em disco por sistema de arquivos.
+
+```bash
+fdisk -l
+```
+Exibe detalhes das partições dos discos.
+
+```bash
+blkid
+```
+Exibe UUIDs e tipos de sistemas de arquivos.
+
+```bash
+smartctl -a /dev/sdX (parte do pacote smartmontools)
+```
+Informações de diagnóstico S.M.A.R.T. do disco.
+
+✅ 5. Placa-mãe, BIOS, e outros detalhes:
+```bash
+dmidecode (requer root)
+```
+Exibe informações do BIOS, placa-mãe, memória, processador, etc.
+
+```bash
+lshw (listar com sudo lshw para detalhes completos)
+```
+Relatório extenso sobre todos os componentes de hardware.
+
+✅ 6. Placa de vídeo (GPU):
+```bash
+lspci | grep -i vga
+```
+Mostra o controlador de vídeo (GPU).
+
+```bash
+glxinfo | grep "OpenGL" (parte do pacote mesa-utils)
+```
+Informações sobre a GPU e drivers gráficos.
+
+✅ 7. Dispositivos PCI:
+```bash
+lspci
+```
+Lista todos os dispositivos PCI, incluindo placas de rede, vídeo, etc.
+
+✅ 8. Dispositivos USB:
+```bash
+lsusb
+```
+Lista dispositivos USB conectados.
+
+✅ 9. Placas de rede:
+```bash
+ip link show ou ifconfig -a
+```
+Mostra interfaces de rede.
+
+```bash
+ethtool eth0
+```
+Exibe e configura parâmetros da interface de rede.
+
+✅ 10. Sensores de temperatura e voltagem:
+```bash
+sensors (parte do pacote lm-sensors)
+```
+Mostra temperatura da CPU, voltagens, e velocidade de ventoinhas.
+
+✅ 11. Informações completas automatizadas:
+```bash
+inxi -Fxz (pode ser necessário instalar)
+```
+Relatório completo sobre hardware e software, de forma resumida e legível.
+
+
+
+---
 ## Adicionar um novo diretorio no PATH
 Temporariamente até o sistema reiniciar
 ```bash
