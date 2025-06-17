@@ -98,6 +98,53 @@ git branch
 ```bash
 git merge <nome-da-branch>
 ```
+---
+6. Exemplo abaixo traz o processo de sincronizar as alterações da branch dev para a main.
+✅ 1. Fazer push passando o nome da branch
+Se você não quiser configurar o rastreamento (ou já está configurado), e quer apenas enviar uma branch específica (por exemplo, dev), o comando é:
+
+```bash
+git push origin dev
+```
+Isso significa:
+origin: é o repositório remoto.
+
+dev: é a sua branch local que será enviada para o remoto como origin/dev.
+
+✅ 2. Fazer merge da dev para a main
+Etapas:
+👉 1. Vá para a branch main:
+```bash
+git checkout main
+```
+
+👉 2. Atualize a branch main com os dados mais recentes do repositório remoto (opcional, mas recomendado):
+```bash
+git pull origin main
+```
+
+👉 3. Faça o merge da dev para a main:
+```bash
+git merge dev
+```
+Isso traz as mudanças da branch dev para dentro da main.
+
+👉 4. Envie as mudanças da main para o repositório remoto:
+```bash
+git push origin main
+```
+
+✅ Resumo rápido:
+```=bash
+# Push da branch dev para o remoto
+git push origin dev
+
+# Merge da dev para a main
+git checkout main
+git pull origin main
+git merge dev
+git push origin main
+```
 
 ## Trabalhando com repositórios remotos
 1. Verificar repositórios remotos configurados:
