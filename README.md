@@ -137,6 +137,17 @@ ip link show ou ifconfig -a
 ```
 Mostra interfaces de rede.
 
+
+```bash
+ip link set up <interface>
+```
+Set a interface para UP
+
+```bash
+ip addr add <IP>/<mask_bit> dev <interface>
+```
+Adiciona IP na interface de forma manual.
+
 ```bash
 ethtool eth0
 ```
