@@ -296,7 +296,6 @@ sudo picocom -b115200 /dev/ttyUSB0
 
 ## Journal
 1. verificar tamanho atual dos logs jornal
-
 ```bash
 sudo journalcctl --disk-usage
 ```
@@ -318,7 +317,6 @@ sudo journalctl --vacuum-size=0
 
 ### Para configurar limite permanente 
 Você pode configurar o tamanho máximo permitido para os logs do journal editando o arquivo de configuração:
-
 1. Abra o arquivo de configuração:
 ```bash
 sudo vi /etc/systemd/journald.conf
